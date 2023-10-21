@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { PlayerService } from 'src/app/core/services/players/player.service';
+
 
 @Component({
   selector: 'app-players',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayersPage implements OnInit {
 
-  constructor() { }
+  
+  constructor(public players: PlayerService) { }
 
   ngOnInit() {
+    this.players.getAll().subscribe()
   }
-
 }
