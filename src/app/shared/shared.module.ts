@@ -1,17 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PruebaDirective } from './directives/prueba.directive';
-import { PruebaPipe } from './pipes/prueba.pipe';
-
-
+import { IonicModule } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
-  declarations: [
-    PruebaDirective,
-    PruebaPipe
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [MenuComponent],
+  imports: [CommonModule, FormsModule, IonicModule],
+  exports: [CommonModule, FormsModule, IonicModule, MenuComponent],
 })
-export class SharedModule { }
+export class SharedModule {}
