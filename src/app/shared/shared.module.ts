@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './components/menu/menu.component';
+import { AboutInfoComponent } from './components/about-info/about-info.component';
 
 @NgModule({
-  declarations: [MenuComponent],
+  declarations: [MenuComponent, AboutInfoComponent],
   imports: [CommonModule, FormsModule, IonicModule],
-  exports: [CommonModule, FormsModule, IonicModule, MenuComponent],
+  exports: [CommonModule, FormsModule, IonicModule, MenuComponent, AboutInfoComponent],
 })
 export class SharedModule {}

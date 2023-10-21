@@ -1,5 +1,5 @@
 <ion-content class="ion-padding">
     <div class="margin-custom">
-        <h1>Content</h1>
+        <app-about-info *ngFor="let author of about.authors$ | async" [author]="author"></app-about-info>
     </div>
 </ion-content>
