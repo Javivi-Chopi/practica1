@@ -1,17 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PruebaDirective } from './directives/prueba.directive';
-import { PruebaPipe } from './pipes/prueba.pipe';
-
-
+import { IonicModule } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    PruebaDirective,
-    PruebaPipe
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [],
+  imports: [CommonModule, FormsModule, IonicModule],
+  exports: [CommonModule, FormsModule, IonicModule],
 })
-export class SharedModule { }
+export class SharedModule {}
