@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu contentId="main-content" swipeGesture="false" type="overlay">
+  <ion-button (click)="about()" fill="clear" color="danger">
+    <p>About</p>
+  </ion-button>
+  <ion-button (click)="home()" color="danger">
+    <p>Home</p>
+  </ion-button>
+  <ion-button (click)="players()" fill="clear" color="danger">
+    <p>Players</p>
+  </ion-button>
+</ion-menu>
