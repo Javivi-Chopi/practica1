@@ -1,0 +1,5 @@
+<ion-content class="ion-padding">
+    <div class="margin-custom">
+        <app-about-info *ngFor="let author of about.authors$ | async" [author]="author"></app-about-info>
+    </div>
+</ion-content>
