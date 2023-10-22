@@ -43,6 +43,9 @@ export class PlayersPage implements OnInit {
           this.players.updatePlayer(info.data).subscribe();
         }
           break;
+        case 'delete': {
+          this.players.deletePlayer(info.data).subscribe();
+        }
       }
     };
     this.presentForm(player, onDismiss);
@@ -59,4 +62,5 @@ export class PlayersPage implements OnInit {
     };
     this.presentForm(null, onDismiss);
   }
+
 }
