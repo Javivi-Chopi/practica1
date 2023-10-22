@@ -52,6 +52,10 @@ export class PlayerFormComponent implements OnInit {
     this._modal.dismiss(null, "close")
   }
 
+  delete(){
+    this._modal.dismiss(this.form.value, "delete")
+  }
+
   submit(){
     this._modal.dismiss(this.form.value, "ok")
   }
