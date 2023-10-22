@@ -8,5 +8,8 @@ export interface Player {
     description: string,
     age: number,
     // Place of birth
-    placeBirth: string
+    placeBirth: string,
+    firstChampion: string,
+    secondChampion: string,
+    thirdChampion: string
 }
