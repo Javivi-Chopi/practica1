@@ -25,7 +25,10 @@ export class PlayerService {
             description: `A true institution of the country and a symbol of our organization. The 'Peluquillas' returns to its natural habitat
             the Giants toplane. After winning four Super Leagues, he will seek to make history as the player with the most national titles in history.`,
             age: 24,
-            placeBirth: "Spain"
+            placeBirth: "Spain",
+            firstChampion: "Darius",
+            secondChampion: "Draven",
+            thirdChampion: "Yuumi"
           },
           {
             id: 2,
@@ -36,7 +39,10 @@ export class PlayerService {
             description: `A true institution of the country and a symbol of our organization. The 'Peluquillas' returns to its natural habitat
             the Giants toplane. After winning four Super Leagues, he will seek to make history as the player with the most national titles in history.`,
             age: 24,
-            placeBirth: "Spain"
+            placeBirth: "Spain",
+            firstChampion: "Darius",
+            secondChampion: "Draven",
+            thirdChampion: "Yuumi"
           },
           {
             id: 3,
@@ -47,7 +53,10 @@ export class PlayerService {
             description: `A true institution of the country and a symbol of our organization. The 'Peluquillas' returns to its natural habitat
             the Giants toplane. After winning four Super Leagues, he will seek to make history as the player with the most national titles in history.`,
             age: 24,
-            placeBirth: "Spain"
+            placeBirth: "Spain",
+            firstChampion: "Darius",
+            secondChampion: "Draven",
+            thirdChampion: "Yuumi"
           },
           {
             id: 4,
@@ -58,7 +67,10 @@ export class PlayerService {
             description: `A true institution of the country and a symbol of our organization. The 'Peluquillas' returns to its natural habitat
             the Giants toplane. After winning four Super Leagues, he will seek to make history as the player with the most national titles in history.`,
             age: 24,
-            placeBirth: "Spain"
+            placeBirth: "Spain",
+            firstChampion: "Darius",
+            secondChampion: "Draven",
+            thirdChampion: "Yuumi"
           },
         ]
         this._players.next(players)
