@@ -94,4 +94,14 @@ export class PlayerService {
       observer.complete()
     });
   }
+
+  addPlayer(player:Player): Observable<Player>{
+    return new Observable((observer) => {
+      var players = [...this._players.value];
+      players.push(player)
+      this._players.next(players)
+      observer.next(player)
+      observer.complete()
+    })
+  }
 }

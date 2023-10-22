@@ -21,6 +21,7 @@ export class PlayersPage implements OnInit {
       .create({
         component: PlayerFormComponent,
         componentProps: {
+          mode: player ? "Edit": "Add",
           player: player,
         },
         cssClass: 'modal-full-right-side',
@@ -38,13 +39,24 @@ export class PlayersPage implements OnInit {
   onCardClicked(player: Player) {
     var onDismiss = (info: any) => {
       switch (info.role) {
-        case 'ok':
-          {
-            this.players.updatePlayer(info.data).subscribe();
-          }
+        case 'ok': {
+          this.players.updatePlayer(info.data).subscribe();
+        }
           break;
       }
     };
     this.presentForm(player, onDismiss);
+  }
+
+  addPlayer(){
+    var onDismiss = (info: any) => {
+      switch (info.role) {
+        case 'ok': {
+          this.players.addPlayer(info.data).subscribe();
+        }
+          break;
+      }
+    };
+    this.presentForm(null, onDismiss);
   }
 }
