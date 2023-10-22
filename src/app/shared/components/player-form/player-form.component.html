@@ -1,0 +1,34 @@
+<ion-content class="ion-padding">
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-input label="photo" labelPlacement="start" formControlName="photo" type="file" (change)="onFileSelected($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="nameInGame" labelPlacement="start" formControlName="nameInGame" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="name" labelPlacement="start" formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="mainRol" labelPlacement="start" formControlName="mainRol" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="age" labelPlacement="start" formControlName="age" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="placeBirth" labelPlacement="start" formControlName="placeBirth" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="description" labelPlacement="start" formControlName="description" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="firstChampion" labelPlacement="start" formControlName="firstChampion" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="secondChampion" labelPlacement="start" formControlName="secondChampion" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="thirdChampion" labelPlacement="start" formControlName="thirdChampion" type="text"></ion-input>
+    </ion-item>
+  </form>
+</ion-content>
