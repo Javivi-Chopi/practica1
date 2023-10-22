@@ -1,5 +1,11 @@
 <ion-content class="ion-padding">
     <div class="margin-custom">
-        <app-players-info *ngFor="let player of players.players$ | async" [player]="player"></app-players-info>
+        <ion-button (click)="addPlayer()">Add new player</ion-button>
+        <app-players-info
+         *ngFor="let player of players.players$ | async" 
+         [player]="player"
+         (onCardClicked)="onCardClicked(player)"
+         >
+        </app-players-info>
     </div>
 </ion-content>
