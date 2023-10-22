@@ -1,0 +1,22 @@
+<ion-card class="card">
+  <ion-card-header>
+      <div class="superior">
+          <ion-avatar>
+              <img alt="Silhouette of a person's head" [src]="player?.photo" />
+          </ion-avatar>
+          <ion-card-title>{{player?.nameInGame}}</ion-card-title>
+      </div>
+  </ion-card-header>
+
+  <ion-card-content>
+      <ion-card-subtitle>Namw</ion-card-subtitle>
+      <ion-card-content>{{player?.name}}</ion-card-content>
+  
+      <ion-card-subtitle>Age</ion-card-subtitle>
+      <ion-card-content>{{player?.age}}</ion-card-content>
+  
+      <ion-card-subtitle>Main rol</ion-card-subtitle>
+      <ion-card-content>{{player?.mainRol}}</ion-card-content>
+  </ion-card-content>
+
+</ion-card>
