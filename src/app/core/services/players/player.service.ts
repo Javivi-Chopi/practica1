@@ -104,4 +104,15 @@ export class PlayerService {
       observer.complete()
     })
   }
+
+  deletePlayer(player:Player): Observable<Player>{
+    return new Observable((observer) => {
+      var players = [...this._players.value]
+      var index = players.findIndex((deletePlayer) => deletePlayer.id == player.id)
+      players.splice(index, 1)
+      this._players.next(players)
+      observer.next(player)
+      observer.complete()
+    })
+  }
 }
