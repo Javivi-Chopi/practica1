@@ -1,18 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Player } from 'src/app/core/interfaces/player';
-import { PlayerService } from 'src/app/core/services/players/player.service';
 
 @Component({
   selector: 'app-players-info',
   templateUrl: './players-info.component.html',
   styleUrls: ['./players-info.component.scss'],
 })
-export class PlayersInfoComponent  implements OnInit {
+export class PlayersInfoComponent implements OnInit {
+  @Input() player: Player | null = null;
+  @Output() onCardClicked: EventEmitter<void> = new EventEmitter<void>();
 
-  @Input() player: Player | null = null
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
 
+  onCardClick() {
+    this.onCardClicked.emit();
+  }
 }
