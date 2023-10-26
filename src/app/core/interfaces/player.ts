@@ -2,7 +2,7 @@ export interface Player {
     id: number,
     // Optional beacouse maybe we dont find a great photo of the player
     photo?: string,
-    nameInGame: string,
+    inGameName: string,
     name: string,
     mainRol: string,
     description: string,

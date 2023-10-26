@@ -13,39 +13,28 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <form [formGroup]="form" (ngSubmit)="submit()">
-    <!--
-    <ion-item>
-      <ion-input label="Photo" labelPlacement="start" formControlName="photo" type="file"></ion-input>
-    </ion-item>
-    -->
-    <ion-item>
-      <ion-input label="Name in game" labelPlacement="start" formControlName="nameInGame" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Name" labelPlacement="start" formControlName="name" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Age" labelPlacement="start" formControlName="age" type="number"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Place Birth" labelPlacement="start" formControlName="placeBirth" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Description" labelPlacement="start" formControlName="description" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Main rol" labelPlacement="start" formControlName="mainRol" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Main champion" labelPlacement="start" formControlName="firstChampion" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Second champion" labelPlacement="start" formControlName="secondChampion" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Third champion" labelPlacement="start" formControlName="thirdChampion" type="text"></ion-input>
-    </ion-item>
+  <form [formGroup]="form" (ngSubmit)="submit()" (keyup.enter)="validateAndSubmit(form)">
+
+    <app-pictures formControlName="photo"></app-pictures>
+    
+    <ion-input label="In game name" labelPlacement="start" formControlName="inGameName" type="text"></ion-input>
+
+    <ion-input label="Name" labelPlacement="start" formControlName="name" type="text"></ion-input>
+
+    <ion-input label="Age" labelPlacement="start" formControlName="age" type="number"></ion-input>
+
+    <ion-input label="Place Birth" labelPlacement="start" formControlName="placeBirth" type="text"></ion-input>
+
+    <ion-input label="Description" labelPlacement="start" formControlName="description" type="text"></ion-input>
+
+    <ion-input label="Main rol" labelPlacement="start" formControlName="mainRol" type="text"></ion-input>
+
+    <ion-input label="Main champion" labelPlacement="start" formControlName="firstChampion" type="text"></ion-input>
+
+    <ion-input label="Second champion" labelPlacement="start" formControlName="secondChampion" type="text"></ion-input>
+
+    <ion-input label="Third champion" labelPlacement="start" formControlName="thirdChampion" type="text"></ion-input>
+
   </form>
 </ion-content>
 
