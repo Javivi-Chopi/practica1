@@ -1,16 +1,24 @@
-<ion-card>
-  <ion-card-header>
-    <ion-avatar class="avatar">
-      <img alt="Avatar image" src="https://ionicframework.com/docs/img/demos/avatar.svg">
-    </ion-avatar>
-  </ion-card-header>
+<div class="flex">
+  <ion-card class="card-about">
+    <div class="card-content">
+    <ion-card-header class="card-header">
+      <div class="avatar-img">
+        <img alt="Avatar image" src="{{author?.photo}}"/>
+      </div>
+    </ion-card-header>
 
-  <ion-card-content>
-    <ion-card-title>Name</ion-card-title>
-    <ion-card-content>{{ author?.name }}</ion-card-content>
-    <ion-card-title>Surname</ion-card-title>
-    <ion-card-content>{{ author?.surname }}</ion-card-content>
-    <ion-card-title>Github Account</ion-card-title>
-    <ion-card-content>{{ author?.account }}</ion-card-content>
-  </ion-card-content>
-</ion-card>
+    <div>
+      <ion-card-title>Name</ion-card-title>
+      <ion-card-content>{{ author?.name }}</ion-card-content>
+      <ion-card-title>Surname</ion-card-title>
+      <ion-card-content>{{ author?.surname }}</ion-card-content>
+      <ion-card-title>Description</ion-card-title>
+      <ion-card-content class="description">{{ author?.description }}</ion-card-content>
+      <ion-card-title>Github Account</ion-card-title>
+      <button class="button-github" role="button">
+        <a [href]="author?.account">GITHUB</a>
+      </button>
+    </div>
+    </div>
+  </ion-card>
+</div>
