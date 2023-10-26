@@ -1,0 +1,132 @@
+.avatar-img {
+    display: flex;
+    width: 75%;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 300px;
+    max-height: 300px;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.avatar-img img {
+    border-radius: 2%;
+}
+
+.card-about {
+    position: relative;
+    background-image: "../../../assets/img/card.gif";
+    opacity: 0.9;
+    margin-top: -2%;
+    width: 450px;
+    background-color: #111111cb; /* Color de fondo (negro) */
+    border-image-slice: 10;
+    animation: fireAnimation 1.1s infinite alternate-reverse;
+    transition: transform 0.3s;
+  }
+  
+.card-about:hover {
+    transform: scale(0.98);
+    background-color: #111111; /* Color de fondo (negro) */
+}
+
+.card-header {
+    align-items: center;
+}
+
+.card-content {
+    text-align: center;
+}
+
+ion-card-title {
+    margin: 1%;
+    font-size: 26px; /* Tamaño de fuente deseado */
+    padding: 10px; /* Espacio interior del título */
+    color: #111; /* Color del texto, blanco en este caso */
+    background-image: linear-gradient(to right, #111 0%, rgba(167, 195, 204, 0.842) 50%, #111 100%);
+    font-weight: bold; /* Texto en negrita */
+}
+
+ion-card-content {
+    position: relative;
+    font-size: 20px; /* Tamaño de fuente deseado */
+    color: #fff; /* Color del texto, blanco en este caso */
+    padding: 20px; /* Espacio interior del contenido */
+    background-color:rgba(167, 195, 204, 0.068) ;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    height: 105px; /* Altura máxima para la descripción */
+}
+
+.button-github {
+    margin: 20px;
+      padding: 0.6em 2em;
+      border: none;
+      outline: none;
+      color: rgb(255, 255, 255);
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    
+    .button-github:before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #737373, /* Blanco */
+        #3f3f3f  /* Negro */
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+    
+    
+    .button-85:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #222;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+
+.button-github a {
+    text-decoration: none;
+    color: #fff;
+}
+  
+@keyframes fireAnimation {
+    0% {
+        box-shadow: 0 0 1px 1.5px rgba(167, 195, 204, 0.068); /* Sombra para simular chispas */
+    }
+    100% {
+        box-shadow: 0 0 10px 5px rgb(236, 232, 232); /* Sombra para simular chispas */
+    }
+  }
+
+  
