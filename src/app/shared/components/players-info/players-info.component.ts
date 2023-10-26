@@ -14,7 +14,7 @@ export class PlayersInfoComponent implements OnInit {
 
   ngOnInit() {}
 
-  onCardClick() {
+  onCardClick(event: Event) {
     this.onCardClicked.emit();
   }
 }

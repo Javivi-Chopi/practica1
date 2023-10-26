@@ -1,0 +1,65 @@
+.mitad{
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+    ion-icon{
+        color: black;
+    }
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+}
+.dividir{
+    gap: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    justify-content: center; /* Centra los elementos en el eje principal */
+    align-items: center;
+
+    .der {
+        margin-left: 20%;
+        img {
+            object-fit: cover;
+            min-height: 450px;
+            max-height: 450px;
+            min-width: 300px;
+            max-width: 300px;
+        }
+    }
+
+    .izq{
+        align-items: center;
+        max-width: 40%;
+
+        .aka {
+            color: red;
+            font-weight: bold;
+        }
+
+        p{
+            text-align: justify;
+        }
+    }
+}
+@media (max-width: 800px) {
+    .dividir{
+        flex-wrap: wrap;
+        .der {
+            margin-left: 0;
+        }
+        .izq{
+            align-items: center;
+            max-width: 90%;
+        }
+    }
+}
