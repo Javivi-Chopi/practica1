@@ -1,34 +1,68 @@
-.card{
-    background-color: rgb(23, 24, 24);
-    width: 420px;
-    height: 270px;
-}
-
-.superior {
+.card {
+    background-color: white;
     display: flex;
-    align-items: center;
-    gap: 15px;
-    ion-img {
-        width: 70px;
-        display: inline;
+    width: 230px;
+	flex-direction: column; 
+	margin: 2rem;
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(0.97);
+        transition: 0.3s;
     }
-    ion-card-title {
-        color: purple;
+    .card-image img {
+        object-fit: cover;
+        min-height: 370px;
+        max-width: 100%;
+        border-radius: 3px;
+    }
+    .in-game-name{
+        color: #333333;
         font-weight: bold;
+        font-size: 20px;
     }
-    .arriba-izq{
-        position: absolute;
-        top: 10px;
-        right: 50px;
+    p, h2 {
+        font-size: 14px;
+        color: #7b7b7b;
     }
-    .arriba-der{
-        position: absolute;
-        top: 10px;
-        right: 10px;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    li {
+        margin: 10px;
+        font-size: 14px;
+        color: #7b7b7b;
     }
 }
 
-ion-card-subtitle{
-    margin-bottom: -15px;
-    color: white;
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        margin: 0 0 2rem 0;
+
+        .card-image img {
+            object-fit: cover;
+            min-height: 559px;
+            max-height: 559px;
+            max-width: 350px;
+            border-radius: 3px;
+        }
+        .in-game-name {
+            font-size: 28px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 20px;
+            margin: 0;
+        }
+        li {
+            margin: 10px;
+            font-size: 20px;
+        }
+    }
 }
