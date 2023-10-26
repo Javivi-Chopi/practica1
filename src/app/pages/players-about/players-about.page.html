@@ -1,0 +1,38 @@
+<ion-content class="ion-padding">
+  <div class="margin-custom" *ngIf="exists">
+
+    <div class="botones" *ngIf="player">
+        <ion-button fill="clear" (click)="toPlayers()">
+          <ion-icon name="arrow-back-sharp" size="large"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" (click)="onEditClicked(player)">
+          <ion-icon name="create-outline" size="large"></ion-icon>
+        </ion-button>
+    </div>
+
+    <div class="dividir">
+      <div>
+        <div class="der centrado">
+          <img [src]="player?.photo">
+        </div>
+      </div>
+
+      <div class="izq centrado">
+        <div>
+          <h1>{{player?.name}}</h1>
+          <p class="aka">{{player?.inGameName | uppercase}}</p>
+          <p>{{player?.mainRol}}</p>
+          <p>{{player?.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="margin-custom" *ngIf="!exists">
+    <div class="mitad centrado">
+      <h1>
+        Este jugador no existe
+      </h1>
+    </div>
+ </div>
+</ion-content>

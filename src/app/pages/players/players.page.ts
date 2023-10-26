@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { Player } from 'src/app/core/interfaces/player';
 import { PlayerService } from 'src/app/core/services/players/player.service';
@@ -10,7 +11,12 @@ import { PlayerFormComponent } from 'src/app/shared/components/player-form/playe
   styleUrls: ['./players.page.scss'],
 })
 export class PlayersPage implements OnInit {
-  constructor(public players: PlayerService, public modal: ModalController) {}
+  id: string | null = null
+  
+  constructor(
+    public players: PlayerService, 
+    public modal: ModalController
+    ) {}
 
   ngOnInit() {
     this.players.getAll().subscribe();
@@ -24,7 +30,7 @@ export class PlayersPage implements OnInit {
           mode: player ? "Edit": "Add",
           player: player,
         },
-        cssClass: 'modal-full-right-side',
+        cssClass: 'modalPage'
       })
       .then((modal) => {
         modal.present();
@@ -34,18 +40,6 @@ export class PlayersPage implements OnInit {
           }
         });
       });
-  }
-
-  onCardClicked(player: Player) {
-    var onDismiss = (info: any) => {
-      switch (info.role) {
-        case 'ok': {
-          this.players.updatePlayer(info.data).subscribe();
-        }
-          break;
-      }
-    };
-    this.presentForm(player, onDismiss);
   }
 
   addPlayer(){
