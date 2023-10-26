@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -7,13 +7,15 @@
 </ion-header>
 
 <ion-menu contentId="main-content" swipeGesture="false" type="overlay">
-  <ion-button (click)="about()" fill="clear" color="danger">
-    <p>About</p>
-  </ion-button>
-  <ion-button (click)="home()" color="danger">
-    <p>Home</p>
-  </ion-button>
-  <ion-button (click)="players()" fill="clear" color="danger">
-    <p>Players</p>
-  </ion-button>
+  <div class="cont">
+    <ion-button class="button-menu" (click)="about()" [ngClass]="{'active-button': currentPage === 'about'}"  fill="clear">
+      <p>About</p>
+    </ion-button>
+    <ion-button class="button-menu" (click)="home()" [ngClass]="{'active-button': currentPage === 'home'}" fill="clear">
+      <p>Home</p>
+    </ion-button>
+    <ion-button class="button-menu" (click)="players()" [ngClass]="{'active-button': currentPage === 'players'}" fill="clear">
+      <p>Players</p>
+    </ion-button>
+  </div>
 </ion-menu>

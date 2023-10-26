@@ -1,0 +1,16 @@
+.button-menu{
+    color: black;
+    font-weight: bold;
+}
+
+.active-button {
+    background-color: rgb(127, 62, 62);
+    color: white;
+    font-weight: bold;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
