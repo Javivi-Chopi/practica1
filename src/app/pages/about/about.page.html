@@ -1,5 +1,11 @@
 <ion-content class="ion-padding">
     <div class="margin-custom">
-        <app-about-info *ngFor="let author of about.authors$ | async" [author]="author"></app-about-info>
+      <div class="flex">
+        <app-about-info *ngFor="let author of about.authors$ | async" [author]="author">
+          <ion-button class="button-github">
+            <a [href]="author.account">GITHUB</a>
+          </ion-button>
+        </app-about-info>
+      </div>
     </div>
-</ion-content>
+  </ion-content>
