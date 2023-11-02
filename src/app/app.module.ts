@@ -8,10 +8,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, SharedModule,],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, SharedModule,HttpClientModule],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
